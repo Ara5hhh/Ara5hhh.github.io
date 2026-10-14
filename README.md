@@ -26,11 +26,23 @@ Configure **Settings → Pages → Deploy from a branch → main → /(root)**. 
 - Edit `index.html` for project text, links, and contact information.
 - Edit `styles.css` for visual styling and responsive layouts.
 - Edit `script.js` for the small rune preview, navigation disclosure, and copy-email feedback. Keep its spell mapping consistent with the actual Luau source.
-- Replace the rune project's clearly labelled video placeholder with a real recording of rune pickup, targeting, casting, and multiplayer spell effects. Add an accessible title, poster image, and captions if the video includes narration.
-- Optional additions: real gameplay clips for both games, a professional Discord contact, or a preferred business email. Do not present promotional thumbnails as captured gameplay.
+- Replace showcase MP4s and matching poster JPEGs in `assets/showcases/` to update recordings. Keep video dimensions, durations, accessible labels, and descriptions in sync in `index.html`. Add caption tracks if future clips include narration.
+- Optional additions: a professional Discord contact or a preferred business email. Do not present promotional thumbnails as captured gameplay.
 
 Email currently used: `stefantakhayori@gmail.com`. Phone is intentionally omitted from the public site.
 
 ## Accessibility and performance
 
 Semantic landmarks, visible keyboard focus, descriptive links and images, native buttons, a skip link, live status feedback, reduced-motion support, and progressive enhancement. Game images have fixed dimensions and lazy loading. No frameworks, external fonts, analytics, trackers, or third-party runtime scripts are required.
+
+## Gameplay recordings
+
+Three recordings supplied by Arash are integrated inline with native playback controls. Posters are actual frames from the original footage. Original Desktop MOV files remain unchanged. The rune recording complements the existing interactive preview and source link; +1 Speed is the first game card; Simulator Gameplay is a smaller secondary showcase, without an unverified release status, source link, or play link. Descriptions reflect visible mechanics and interfaces.
+
+| Asset | Duration | Web resolution | Format | Size |
+| --- | --- | --- | --- | --- |
+| `rune-spellcasting.mp4` | 1:30 | 1280 × 832 | H.264 / AAC, 30 fps | 21.94 MiB |
+| `plus1-speed.mp4` | 2:00 | 1280 × 832 | H.264 / AAC, 30 fps | 22.63 MiB |
+| `simulator-gameplay.mp4` | 1:24 | 1280 × 818 | H.264 / AAC, 30 fps | 19.45 MiB |
+
+MP4s use progressive-download fast start, preserve the original audio, start muted, and never autoplay. `preload="none"` defers video loading until interaction. Native controls provide play/pause, seeking, volume, and fullscreen where supported. Aspect ratios are preserved without cropping. The complete static media set stays within the [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits); individual files also fit the [25 MiB browser upload limit](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
