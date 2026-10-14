@@ -27,7 +27,7 @@ Configure **Settings → Pages → Deploy from a branch → main → /(root)**. 
 - Edit `styles.css` for visual styling and responsive layouts.
 - Edit `script.js` for the small rune preview, navigation disclosure, and copy-email feedback. Keep its spell mapping consistent with the actual Luau source.
 - Replace showcase MP4s and matching poster JPEGs in `assets/showcases/` to update recordings. Keep video dimensions, durations, accessible labels, and descriptions in sync in `index.html`. Add caption tracks if future clips include narration.
-- Optional additions: a professional Discord contact or a preferred business email. Do not present promotional thumbnails as captured gameplay.
+- Optional additions: a preferred business email. Do not present promotional thumbnails as captured gameplay.
 
 Email currently used: `stefantakhayori@gmail.com`. Phone is intentionally omitted from the public site.
 
@@ -46,3 +46,9 @@ Three recordings supplied by Arash are integrated inline with native playback co
 | `simulator-gameplay.mp4` | 1:24 | 1280 × 818 | H.264 / AAC, 30 fps | 19.45 MiB |
 
 MP4s use progressive-download fast start, preserve the original audio, start muted, and never autoplay. `preload="none"` defers video loading until interaction. Native controls provide play/pause, seeking, volume, and fullscreen where supported. Aspect ratios are preserved without cropping. The complete static media set stays within the [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits); individual files also fit the [25 MiB browser upload limit](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+
+## Contact and social sharing
+
+Discord username `ara5h` was provided by Arash and is displayed as `@ara5h`, with an accessible copy button where the Clipboard API is available. No Discord ID or profile URL is assumed. Email remains `stefantakhayori@gmail.com`.
+
+The 1200 × 630 PNG at `assets/ara5h-preview.png` supplies the branded Open Graph and large Twitter/X card. Metadata uses absolute HTTPS image URLs, image dimensions and descriptive alternative text, with the existing canonical URL unchanged. Open Graph fields follow https://ogp.me/. Discord may retain an earlier cached embed; this does not require changing the site's canonical address.

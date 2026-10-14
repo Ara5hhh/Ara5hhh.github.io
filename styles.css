@@ -47,3 +47,8 @@
 .secondary-video{border:1px solid var(--line);border-radius:10px;overflow:hidden}.secondary-video figcaption{font-size:9px;padding:11px 14px}
 @media(max-width:800px){.featured-video{border-left:0;border-top:1px solid var(--line)}.secondary-project{gap:24px;padding:24px;grid-template-columns:1fr 1fr}.project-video figcaption{font-size:9px;padding:12px 16px}}
 @media(max-width:560px){.secondary-project{grid-template-columns:1fr;gap:22px;padding:23px;margin-top:22px}.secondary-copy>p{font-size:12px}.secondary-copy h3{font-size:23px}.project-video figcaption{font-size:9px;padding:12px 16px}.secondary-video figcaption{font-size:8px;padding:10px 12px}}
+
+/* Discord uses the existing social row and accessible copy-button styling. */
+.discord-contact{padding-block:14px}.discord-contact:hover{color:var(--text)}
+.discord-contact small{user-select:all}.discord-copy-status{margin:0;height:auto}
+.discord-copy-status:not(:empty){padding-bottom:12px}

@@ -62,18 +62,24 @@ document.addEventListener('click', event => {
   if (!event.target.closest('.site-header')) closeMenu();
 });
 
-const copyButton = document.getElementById('copy-email');
-if (navigator.clipboard && window.isSecureContext) {
-  copyButton.hidden = false;
-  copyButton.addEventListener('click', async () => {
+function enableContactCopy(buttonId, statusId, value, success, fallback) {
+  const button = document.getElementById(buttonId);
+  const status = document.getElementById(statusId);
+  if (!navigator.clipboard || !window.isSecureContext) return;
+  button.hidden = false;
+  button.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText('stefantakhayori@gmail.com');
-      document.getElementById('copy-status').textContent = 'Email address copied.';
+      await navigator.clipboard.writeText(value);
+      status.textContent = success;
     } catch {
-      document.getElementById('copy-status').textContent = 'Select the email address to copy it.';
+      status.textContent = fallback;
     }
   });
 }
+enableContactCopy('copy-email', 'copy-status', 'stefantakhayori@gmail.com',
+  'Email address copied.', 'Select the email address to copy it.');
+enableContactCopy('copy-discord', 'discord-copy-status', 'ara5h',
+  'Discord username copied.', 'Select @ara5h to copy the username.');
 
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.documentElement.classList.add('js-reveal');
